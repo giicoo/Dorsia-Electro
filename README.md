@@ -64,3 +64,39 @@ current_R,current_S,current_T
 2.500542755,0.2791188,-2.1332770930000002
 2.571856335,0.060707496,-1.9927833660000005
 ...
+
+
+Полезные материалы
+
+* Диагностика динамического оборудования;
+
+* Вибродиагностика;
+
+* ГОСТ ISO 20958-2015 «СИГНАТУРНЫЙ АНАЛИЗ ЭЛЕКТРИЧЕСКИХ СИГНАЛОВ ТРЕХФАЗНОГО АСИНХРОННОГО ДВИГАТЕЛЯ»
+
+* ГОСТ Р 55100-212 Методы токовой диагностики электрооборудования
+
+* РД 34.35-51.300-97 Объем и нормы испытаний электрооборудования
+
+* ГОСТ Р 56542-2015 Диагностика технического состояния электрооборудования
+
+* ГОСТ Р 57700.37-2021 Компьютерные модели и моделирование. Цифровые двойники изделий. Общие положения
+
+* [https://drive.fondsmena.ru/s/3fiHapYG8cpbafk](https://drive.fondsmena.ru/s/3fiHapYG8cpbafk) - основные данные задания Чемпионата.
+
+* [https://www.elibrary.ru/download/elibrary\_41412297\_19051034.pdf](https://www.elibrary.ru/download/elibrary_41412297_19051034.pdf) - статья о прогнозировании ресурса кабельных линий с использованием метода искусственных нейронных сетей
+
+* [https://www.elibrary.ru/download/elibrary\_13037097\_77781197.pdf](https://www.elibrary.ru/download/elibrary_13037097_77781197.pdf) - статья о разработке методики токовой диагностики асинхронных двигателей по осциллограммам нестационарных режимов работы
+
+* [https://www.elibrary.ru/download/elibrary\_67215603\_45447060.pdf](https://www.elibrary.ru/download/elibrary_67215603_45447060.pdf) - статья, описывающая архитектуру киберфизической системы прогнозирования электропотребления на основе нейронной сети
+
+* [https://www.elibrary.ru/download/elibrary\_44451349\_90738198.pdf](https://www.elibrary.ru/download/elibrary_44451349_90738198.pdf) - статья посвящена исследованиям вопросам создания диагностики и прогнозирования термофлуктуационных процессов изоляционных материалов силовых кабельных линий (СКЛ) электроэнергетических систем на основе методов искусственного интеллекта.
+
+* [https://www.elibrary.ru/download/elibrary\_61788662\_48638589.pdf](https://www.elibrary.ru/download/elibrary_61788662_48638589.pdf) - рассматривается программно-моделируемый комплекс системы управления энергосетью и её элементами.
+
+* [https://www.mdpi.com/1996-1073/12/21/4029](https://www.mdpi.com/1996-1073/12/21/4029) - Evaluation of Current Signature in Bearing Defects by Envelope Analysis of the Vibration in Induction Motors
+
+* [https://www.extrica.com/article/15126](https://www.extrica.com/article/15126) - Vibration and motor current analysis of induction motors to diagnose mechanical faults
+
+* [https://power-mi.com/content/typical-bearing-defects-and-spectral-identification](https://power-mi.com/content/typical-bearing-defects-and-spectral-identification) - Typical bearing defects and spectral identification
+
