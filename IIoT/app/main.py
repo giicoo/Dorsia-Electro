@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from services.services import mqtt_service
-from api.v1 import router_v1
+from app.services.services import mqtt_service
+from app.api.v1 import router_v1
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from services.services import MQTTService, get_service
+from app.services.services import MQTTService, get_service
 
 LoadService = APIRouter(tags=["loads"])
 

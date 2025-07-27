@@ -5,7 +5,7 @@ import paho.mqtt.client as mqtt
 import json
 
 class MQTTService:
-    MQTT_BROKER = "localhost"
+    MQTT_BROKER = "mosquitto"
     MQTT_PORT = 1883
     MQTT_TOPIC_PREFIX = "motor"
 
