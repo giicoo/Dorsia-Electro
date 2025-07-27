@@ -1,4 +1,14 @@
 services:
+
+  iiot:
+    build: ./IIoT
+    container_name: IIoT
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mosquitto
+    restart: always
+
   mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto
