@@ -27,6 +27,15 @@ services:
     depends_on:
       - mosquitto
     restart: always
+  
+  monitoring_service:
+    build: ./monitoring_service
+    container_name: monitoring_service
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db
+    restart: always
 
   vmagent:
     image: victoriametrics/vmagent
@@ -61,3 +70,20 @@ services:
     depends_on:
       - victoria-metrics
     restart: always
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: db
+    ports:
+      - "5433:5432"
+      
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8090:8080
+    depends_on:
+      - db
