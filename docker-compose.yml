@@ -1,0 +1,89 @@
+services:
+
+  iiot:
+    build: ./IIoT
+    container_name: IIoT
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mosquitto
+    restart: always
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    restart: always
+
+  
+  mqtt_exporter:
+    build: ./mqtt_exporter
+    container_name: mqtt_exporter
+    ports:
+      - "9100:9100"
+    depends_on:
+      - mosquitto
+    restart: always
+  
+  monitoring_service:
+    build: ./monitoring_service
+    container_name: monitoring_service
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db
+    restart: always
+
+  vmagent:
+    image: victoriametrics/vmagent
+    container_name: vmagent
+    ports:
+      - "8429:8429"
+    volumes:
+      - ./vmagent.yml:/etc/vmagent.yml
+    command:
+      - "-promscrape.config=/etc/vmagent.yml"
+      - "-remoteWrite.url=http://victoria-metrics:8428/api/v1/write"
+    depends_on:
+      - victoria-metrics
+      - mqtt_exporter
+    restart: always
+
+  victoria-metrics:
+    image: victoriametrics/victoria-metrics
+    container_name: victoria-metrics
+    ports:
+      - "8428:8428"
+    restart: always
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - victoria-metrics
+    restart: always
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: db
+    ports:
+      - "5433:5432"
+      
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8090:8080
+    depends_on:
+      - db

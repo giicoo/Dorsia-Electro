@@ -1,0 +1,1 @@
+from src.models.models import Motor, Defect

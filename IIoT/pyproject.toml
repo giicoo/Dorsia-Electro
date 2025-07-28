@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "iiot"
+version = "0.1.0"
+description = "Industrial IoT exporter"
+authors = ["giicoo <giicoo.gm@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "app" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = ">=0.116.1,<0.117.0"
+uvicorn = ">=0.35.0,<0.36.0"
+paho-mqtt = "1.6.1"
+asyncio-mqtt = ">=0.16.2,<0.17.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "fastapi-sqlalchemy-app"
+version = "0.1.0"
+description = "FastAPI app with SQLAlchemy and dotenv"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+# FastAPI
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "^0.30.0"}
+
+# SQLAlchemy
+sqlalchemy = "^2.0.30"
+asyncpg = "^0.29.0"
+
+# Alembic for migrations
+alembic = "^1.13.1"
+
+# Pydantic for validation
+pydantic = "^2.7.1"
+pydantic-settings = "^2.2.1"
+
+# dotenv
+python-dotenv = "^1.0.1"
+
+# Optional (for nice logs)
+loguru = "^0.7.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+httpx = "^0.27.0"
